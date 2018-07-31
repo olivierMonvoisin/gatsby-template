@@ -14,7 +14,29 @@ const Layout = ({ children, data }) => (
           siteMetadata {
             title
           }
+        },
+        allMarkdownRemark {
+    totalCount,
+    edges {
+      node {
+        fileAbsolutePath,
+        id,
+        headings{
+          value
         }
+      	wordCount {
+      	  paragraphs
+      	  sentences
+      	  words
+      	},
+        rawMarkdownBody,
+        frontmatter{
+          title
+        },
+        html
+      }
+    }
+  },
       }
     `}
     render={data => (
@@ -35,6 +57,16 @@ const Layout = ({ children, data }) => (
             paddingTop: 0,
           }}
         >
+        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <h3>
+              {node.frontmatter.title}{" "}
+
+            </h3>
+            <p>{node.excerpt}</p>
+          </div>
+        ))}
           {children}
         </div>
       </>

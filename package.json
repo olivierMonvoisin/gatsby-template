@@ -10,6 +10,8 @@
     "gatsby-plugin-netlify-cms": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-styled-components": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
     "netlify-cms": "^1.9.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
