@@ -1,18 +1,30 @@
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Template',
+    title: 'Gatsby + Netlify CMS Starter',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-netlify-cms',
-    'gatsby-transformer-remark'
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/img`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
