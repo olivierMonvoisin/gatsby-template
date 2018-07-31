@@ -3,7 +3,6 @@ backend:
   repo: olivierMonvoisin/gatsby-template
 
 media_folder: static/assets
-public_folder: assets
 
 collections:
   - name: blog
