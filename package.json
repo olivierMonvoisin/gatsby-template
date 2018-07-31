@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "gatsby-template",
+  "description": "Gatsby template",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Olivier Monvoisin <oliviermonvoisin@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "next",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
